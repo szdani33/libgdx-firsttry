@@ -59,4 +59,11 @@ public class MyGdxGame extends ApplicationAdapter {
         font.draw(batch, "FPS: " + averageFrameRate.intValue(), 10, 30);
         batch.end();
 	}
+
+    @Override
+    public void dispose() {
+        batch.dispose();
+        img.dispose();
+        font.dispose();
+    }
 }
